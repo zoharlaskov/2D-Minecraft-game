@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stely.css" />
+    <link rel="stylesheet" href="./stely1.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <meta
+      name="description"
+      content="2d Minecraft game using css scss html vanilla JavaScript"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript, game, Minecraft" />
+    <title>Minecraft game</title>
+  </head>
+  <body>
+    <div class="splashScreen">
+      <div class="logo"></div>
+      <h1>2D SPECIAL EDITION</h1>
+
+      <br />
+      <button class="startGame">Start game</button>
+      <br />
+      <button class="instructionsButton">Instructions</button>
+      <div class="instructionsDisplay">
+        Minecraft 2D is a creation game.
+        <br />
+        You can mine different resources and build your own shapes.
+        <br />
+        How to mine:
+        <img
+          src="./stone_axe.png"
+          alt="axe can mine wood and leaves"
+          height="70"
+          width="210"
+        />
+        <br />
+        <img
+          src="./stone_shovel.png"
+          alt="shovel can mine dirt and grass"
+          height="70"
+          width="210"
+        />
+        <br />
+        <img
+          src="./stone_pickaxe.png"
+          alt="pickaxe can mine rocks and diamond"
+          height="70"
+          width="210"
+        />
+        <br />
+        Select a resource from inventory and place it in an empty space. enjoy!
+
+        <button class="instructionsClose">Close</button>
+      </div>
+    </div>
+    <main>
+      <div class="userMessage"></div>
+      <div class="restartContainer"><button>Restart</button></div>
+      <div class="boardContainer"></div>
+    </main>
+    <div class="sidebar">
+      <div class="toolsContainer">
+        <div class="tool selected" data-toolType="axe">
+          <figure>
+            <img src="./stone_axe.png" alt="axe" />
+          </figure>
+        </div>
+        <div class="tool" data-toolType="pickaxe">
+          <figure>
+            <img src="./stone_pickaxe.png" alt="pickaxe" />
+          </figure>
+        </div>
+        <div class="tool" data-toolType="shovel">
+          <figure>
+            <img src="./stone_shovel.png" alt="shovel" />
+          </figure>
+        </div>
+      </div>
+      <div class="inventory"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

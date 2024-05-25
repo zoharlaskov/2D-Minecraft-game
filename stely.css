@@ -1,0 +1,277 @@
+.splashScreen {
+  background: url("") center center/cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  line-height: 1;
+  font-size: 24px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+.splashScreen .logo {
+  background: url("./Minecraft-Logo.png") no-repeat center;
+  background-size: 70%;
+  width: 800px;
+  min-height: 150px;
+  margin-top: 8vh;
+}
+.splashScreen a,
+.splashScreen a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.splashScreen a:hover {
+  color: hotpink;
+}
+.splashScreen h1 {
+  font-family: "minecraft-heavy";
+  color: black;
+  text-shadow: none;
+}
+.splashScreen p {
+  margin: 3vh 0;
+}
+.splashScreen .startGame {
+  animation: wiggle 3s 2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  12% {
+    transform: rotate(5deg);
+  }
+  16% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+}
+.splashScreen button {
+  width: 300px;
+}
+
+.instructionsDisplay {
+  padding: 30px;
+  width: 800px;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 10vh;
+  left: calc(50% - 400px);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  line-height: 1.7;
+}
+.instructionsDisplay img {
+  margin: auto;
+}
+.instructionsDisplay button {
+  margin: 20px auto;
+}
+
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #c6c6c6;
+}
+.sidebar .toolsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.sidebar .toolsContainer .tool {
+  background: #8b8b8b;
+  border: 3px solid;
+  border-color: #484848 white white #484848;
+  margin: 15px;
+}
+.sidebar .toolsContainer .tool figure {
+  margin-inline-end: 15px;
+  margin-inline-start: 15px;
+  width: 60px;
+  height: 60px;
+}
+.sidebar .toolsContainer .tool figure img {
+  width: 100%;
+  height: 100%;
+}
+.sidebar .toolsContainer .selectedTool {
+  background: lightsteelblue;
+}
+.sidebar .toolsContainer .wrong {
+  animation: wrongTool 1s linear;
+}
+
+@keyframes wrongTool {
+  10%,
+  90% {
+    background: red;
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.inventory {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  margin-top: 15px;
+}
+.inventory .resource {
+  width: 60px;
+  height: 60px;
+  border: 3px solid;
+  border-color: #484848 white white #484848;
+  padding-top: 36px;
+  padding-right: 2px;
+  font-size: 16px;
+  text-align: right;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+.inventory .empty {
+  background: #8b8b8b;
+}
+.inventory .selectedResource {
+  border-width: 4px;
+  border-color: white #484848 #484848 white;
+}
+
+@font-face {
+  font-family: "minecraft";
+  src: url("/assets/fonts/Minecraft.ttf");
+}
+
+@font-face {
+  font-family: "minecraft-heavy";
+  src: url("/assets/fonts/MinecraftTen-VGORe.ttf");
+}
+
+* {
+  font-family: "minecraft", "Courier New", Courier, monospace;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto 200px;
+  background: url("./wallpaper-minecraft.jpg") center center/cover;
+  position: relative;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+main .boardContainer {
+  margin: auto;
+  display: grid;
+  width: 100vmin;
+  height: 100vmin;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+}
+
+.sky {
+  background-color: lightskyblue;
+}
+
+.cloud {
+  background-color: whitesmoke;
+}
+
+.dirt {
+  background: sienna;
+  background: url("./soil.jpg") no-repeat center center/cover;
+}
+
+.grass {
+  background: #0b8b16;
+  background: url("./grass.png") no-repeat center center/cover;
+}
+
+.rock {
+  background-color: gray;
+  background: url("./rock.png") no-repeat center center/cover;
+}
+
+.wood {
+  background-color: saddlebrown;
+  background: url("./wood.png") no-repeat center center/cover;
+}
+
+.leaves {
+  background-color: olivedrab;
+  background: url("./tree-leaves.png") no-repeat center center/cover;
+}
+
+.diamonds {
+  background-color: turquoise;
+  background: url("./diamond.png") no-repeat center center/cover;
+}
+
+.userMessage {
+  position: absolute;
+  top: 20px;
+  align-self: center;
+  z-index: 200;
+  color: black;
+  font-size: 22px;
+  animation: fadeout 0.5s 3s;
+}
+
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+  }
+}
+
+.restartContainer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #c6c6c6;
+  border-radius: 0;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: normal;
+  border-width: 4px;
+  margin: 10px auto;
+  border-color: white #484848 #484848 white;
+}
+button:hover {
+  background-color: white;
+}
